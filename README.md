@@ -52,6 +52,8 @@ huggingface : https://huggingface.co/szzzzz/sentiment_classifier_sentence_level_
 6. Video_Games_5. 5分类数据集
 
 
+由于数据集总体而言偏正向,模型的输出相对也偏正向.
+
 ## 数据处理
 
 
