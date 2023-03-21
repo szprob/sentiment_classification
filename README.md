@@ -90,9 +90,9 @@ huggingface : https://huggingface.co/szzzzz/sentiment_classifier_sentence_level_
 使用方法如下:
 
 ```python
-from sentiment_classification import TextToxicDetector
+from sentiment_classification import SentimentClassifier
 
-model = TextToxicDetector()
+model = SentimentClassifier()
 
 # 如果模型down到了本地
 model.load(model_path)
@@ -103,12 +103,20 @@ model.load('szzzzz/sentiment_classifier_sentence_level_bert_16m')
 result = model.rank("I like it.")
 '''
 result
-{'toxic': 0.94,
- 'severe_toxic': 0.03,
- 'obscene': 0.59,
- 'threat': 0.02,
- 'insult': 0.44,
- 'identity_hate': 0.05}
+4.79
 '''
+
+result = model.rank("I hate it.")
+'''
+result
+2.42
+'''
+
+star = round(model.rank("I hate it."))
+'''
+star
+2
+'''
+
 
 ```
